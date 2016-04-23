@@ -83,88 +83,26 @@ public class SpotFavoriteController {
 		return null;
 	}
 	
-	@RequestMapping("/cancelSpotFavorite")
-	public String cancelFavorite(HttpServletRequest request, HttpServletResponse response){
-		return null;
-	}
-/*
-	@RequestMapping("/spot")
-	public String adminLogin(HttpServletRequest request,
-			HttpServletResponse response) {
-		if (request.getSession().getAttribute("addMsg") != null)
-			request.getSession().removeAttribute("addMsg");
-		request.getSession().setAttribute("spots", spotService.getSpots());
-		return "WEB-INF/spot_management";
-	}
 
-	@RequestMapping("/findSpot")
-	public String findSpot(HttpServletRequest request,
-			HttpServletResponse response, String name) {
-		System.out.println("name:" + name);
-		if (request.getSession().getAttribute("addMsg") != null)
-			request.getSession().removeAttribute("addMsg");
-		List<Spot> spots = spotService.findSpots(name);
-		System.out.println("个数：" + spots.size());
-		if (spots.size() == 0)
-			System.out.println("靓仔，空值啊");//奇怪了，为什么这句不执行
-		else
-			request.getSession().setAttribute("spots", spots);
-		return "WEB-INF/spot_management";
-	}
-
-	@RequestMapping("/addSpot")
-	public String addSpot(HttpServletRequest request,
-			HttpServletResponse response, String name, String pic,
-			String trans, String intro) {
-		System.out.println("name:" + name);
-		System.out.println("trans:" + trans);
-		System.out.println("intro:" + intro);
-
-		if (spotService.addSpot(name, pic, trans, intro) > 0) {
-			request.getSession().setAttribute("addMsg", "添加成功！");
-		} else {
-			request.getSession().setAttribute("addMsg", "添加失败！");
-		}
-		return "WEB-INF/spot_management";
-	}
-
-	@RequestMapping("/delSpot")
-	public String delSpot(HttpServletRequest request, Integer id) {
-		System.out.println(id);
-		if (spotService.delSpot(id) > 0) {
-			request.getSession().setAttribute("delMsg", "删除成功！");
-		} else {
-			request.getSession().setAttribute("delMsg", "删除失败！");
-		}
-		return "WEB-INF/spot_management";
-	}
-
-	@RequestMapping("/updateSpot")
-	public String updateSpot(HttpServletRequest request,
-			@RequestParam("spotId") int id, String name, String pic,
-			String trans, String intro) {
-		/*Enumeration<String> enumeration = request.getParameterNames();
-		while (enumeration.hasMoreElements()) {
-			String string = (String) enumeration.nextElement();
-			System.out.println(request.getParameterValues(string));
-
-		}*//*
-		System.out.println("intro" + intro);
-		if (spotService.updateSpot(id, name, pic, trans, intro) > 0) {
-			request.getSession().setAttribute("updateMsg", "更新成功！");
-		} else {
-			request.getSession().setAttribute("updateMsg", "更新失败！");
-		}
-		return "WEB-INF/spot_management";
-	}
-	
-	//getAll
-		@RequestMapping("/appGetSpots")
-		public String appGetRoutes(HttpServletRequest request, HttpServletResponse response){
-			System.out.println("appGetSpots");
-			List<Spot> list;
+	@RequestMapping("/spotFavo")//查询某用户是否收藏了某景点
+	public String favo(HttpServletRequest request, HttpServletResponse response, String username, Integer spotid){
+		//System.out.println("username:" + username + " " + "spotid:" + spotid);
+		UserinfoExample userinfoExample = new UserinfoExample();
+		userinfoExample.createCriteria().andNameEqualTo(username);
+		List<Userinfo> list = userinfoService.selectByExample(userinfoExample);
+		if(list != null && list.size() > 0){  	//有这个用户才能进行以下操作
+			System.out.println("userId:" + list.get(0).getId());
+			Integer userId = list.get(0).getId();
+			List<SpotFavorite> listFavorites = null;
+			int result = 0;
 			try {
-				list = spotService.selectByExample(new SpotExample());
+				
+				//listFavorites = spotFavoriteService.selectByExample(example);
+				SpotFavorite record = new SpotFavorite();
+				record.setUserId(userId); 
+				record.setSpotId(spotid);
+				result = spotFavoriteService.insert(record);
+				System.out.println(list.size());
 			} catch (Exception e) {
 				list = null;
 				e.printStackTrace();
@@ -175,16 +113,82 @@ public class SpotFavoriteController {
 			PrintWriter printWriter;
 			try {
 				printWriter = response.getWriter();
-				if (list != null && list.size() > 0) {
-					JSONArray jsonArray = JSONArray.fromObject(list);
-					printWriter.print(jsonArray);
+				if (result > 0) {
+					printWriter.print("yes");
+					System.out.println("yes");
+					//System.out.println(list.get(0).getName());
+					//request.getServletContext().setAttribute("user" + name, list.get(0).getId());
+					//System.out.println(list.get(0).getId());
 				} else {
+					printWriter.print("no");
+					System.out.println("no");
 				}
 
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			return null;
 		}
-		*/
+		return null;
+	}
+	
+
+
+	@RequestMapping("/spotNoFavo")//查询某用户是否收藏了某景点
+	public String noFavo(HttpServletRequest request, HttpServletResponse response, String username, Integer spotid){
+		//System.out.println("username:" + username + " " + "spotid:" + spotid);
+		UserinfoExample userinfoExample = new UserinfoExample();
+		userinfoExample.createCriteria().andNameEqualTo(username);
+		List<Userinfo> list = userinfoService.selectByExample(userinfoExample);
+		if(list != null && list.size() > 0){  	//有这个用户才能进行以下操作
+			System.out.println("userId:" + list.get(0).getId());
+			Integer userId = list.get(0).getId();
+			List<SpotFavorite> listFavorites = null;
+			
+			try {
+				SpotFavoriteExample example = new SpotFavoriteExample();
+				example.createCriteria().andUserIdEqualTo(userId).andSpotIdEqualTo(spotid);
+				listFavorites = spotFavoriteService.selectByExample(example);
+				
+				
+			} catch (Exception e) {
+				list = null;
+				e.printStackTrace();
+			}
+			response.setContentType("text/html");
+			response.setCharacterEncoding("utf-8");
+
+			
+			int result = 0;
+			PrintWriter printWriter;
+			try {
+				if (listFavorites != null && listFavorites.size() > 0) {
+					Integer sid = listFavorites.get(0).getId();
+					result = spotFavoriteService.deleteByPrimaryKey(sid);
+					
+					
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			try {
+				printWriter = response.getWriter();
+				if(result > 0){
+					printWriter.print("yes");
+					System.out.println("yes");
+				} else {
+					printWriter.print("no");
+					System.out.println("no");
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
+	
+
 }
