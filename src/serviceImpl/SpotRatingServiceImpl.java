@@ -55,6 +55,12 @@ public class SpotRatingServiceImpl implements SpotRatingService{
 		return SpotRatingDAO.selectByPrimaryKey(id);
 	}
 
+	@Override
+	public List<SpotRating> selectByExampleWithBLOBs(SpotRatingExample example) {
+		// TODO Auto-generated method stub
+		return SpotRatingDAO.selectByExampleWithBLOBs(example);
+	}
+
 	
 	
 }

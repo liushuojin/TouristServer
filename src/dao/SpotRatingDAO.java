@@ -16,4 +16,5 @@ public interface SpotRatingDAO {
 	int updateByPrimaryKey(SpotRating record);
 	List<SpotRating> selectByExample(SpotRatingExample example);
 	SpotRating selectByPrimaryKey(Integer id);
+	List<SpotRating> selectByExampleWithBLOBs(SpotRatingExample example);
 }

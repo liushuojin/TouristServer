@@ -56,5 +56,11 @@ public class SpotRatingDAOImpl implements SpotRatingDAO {
 		// TODO Auto-generated method stub
 		return SpotRatingMapper.selectByPrimaryKey(id);
 	}
+
+	@Override
+	public List<SpotRating> selectByExampleWithBLOBs(SpotRatingExample example) {
+		// TODO Auto-generated method stub
+		return SpotRatingMapper.selectByExampleWithBLOBs(example);
+	}
 	
 }

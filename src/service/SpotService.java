@@ -4,6 +4,8 @@ import java.util.List;
 
 import entity.Spot;
 import entity.SpotExample;
+import entity.SpotRating;
+import entity.SpotRatingExample;
 import entity.Userinfo;
 
 public interface SpotService {

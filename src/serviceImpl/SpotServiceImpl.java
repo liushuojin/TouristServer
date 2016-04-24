@@ -11,6 +11,8 @@ import dao.UserinfoDAO;
 import entity.Admininfo;
 import entity.Spot;
 import entity.SpotExample;
+import entity.SpotRating;
+import entity.SpotRatingExample;
 import entity.Userinfo;
 import service.AdmininfoService;
 import service.SpotService;
@@ -59,6 +61,7 @@ public class SpotServiceImpl implements SpotService{
 	public List<Spot> selectByExample(SpotExample example) {
 		return spotDAO.selectByExample(example);
 	}
+
 	
 	
 }
