@@ -10,9 +10,10 @@
 	<center>
 		<h1>欢迎来到珠海市旅游资源及路线管理查询系统</h1>
 		<form action="adminlogin.spring" method="post">
-			<input type="text" name="name"><br><br>
-			<input type="text" name="password"><br><br>
-			<input type="submit" value="登录">
+			管理员名称：<input type="text" name="name"><br><br>
+			管理员密码：<input type="text" name="password"><br><br>
+			<input type="submit" value="登录">&nbsp;&nbsp;
+			<input type="reset" value="重置">
 		</form>
 	</center>
 </body>

@@ -10,11 +10,13 @@
 <body>
 	<center>
 		<h1>${admin }，欢迎来到珠海市旅游资源及路线管理查询系统后台管理系统</h1>
-		<table>
+		<table border="1px">
+			<tr><th>用户ID</th><th>用户名称</th><th>禁言/取消禁言</th></tr>
 			<c:forEach items="${userinfos }" var="item">
 			<tr>
 				<td>${item.id }</td>
 				<td>${item.name }</td>
+				<td><input type = "button" value = "禁言"></td>
 			</tr>
 			</c:forEach>
 		</table>
