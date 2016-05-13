@@ -7,6 +7,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>珠海市旅游旅游路线及旅游路线管理系统</title>
+<link href="style/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="style/bootstrap-table.css">
+<link rel="stylesheet" href="style/common.css">
+<style>
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
 <style type="text/css">
 #addRoute, #updateRoute {
 	display: none;
@@ -23,8 +31,10 @@
 </script>
 </head>
 <body>
-	<center>
-		<h1>${admin }，欢迎来到珠海市旅游路线管理功能</h1>
+
+	<div class="container">
+		<h1 class="nav col-md-12 navbar navbar-default">${admin }，欢迎来到珠海市旅游路线管理功能</h1>
+		<br> <br> <br> <br>
 		<input type="button" value="添加旅游路线信息" id="show"
 			onclick="showAddRoute()"><br> ${addMsg }&nbsp;${delMsg }&nbsp;${updateMsg }<br>
 		<a href="route.spring">刷新旅游路线列表</a>
@@ -78,6 +88,6 @@
 				</tr>
 			</c:forEach>
 		</table>
-	</center>
+	</div>
 </body>
 </html>
