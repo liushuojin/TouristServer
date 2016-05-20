@@ -35,6 +35,10 @@
 	<div class="container">
 		<h1 class="nav col-md-12 navbar navbar-default">${admin }，欢迎来到珠海市旅游资源管理功能</h1>
 		<br> <br> <br> <br>
+		<a href="getUserinfos.spring"  class="btn btn-primary col-md-4">用户管理系统</a>
+		<a href="spot.spring" class="btn btn-success col-md-4">旅游资源管理系统</a>
+		<a href="route.spring" class="btn btn-info col-md-4">旅游路线管理系统</a>
+		<br><br><br><br>
 		<input type="button" value="添加景点信息" id="show" onclick="showAddSpot()"><br>
 		${addMsg }&nbsp;${delMsg }&nbsp;${updateMsg }<br> <a
 			href="spot.spring">刷新景点列表</a>
@@ -76,7 +80,7 @@
 				<input type="reset" value="重置">
 			</form:form>
 		</div>
-		<table border="1">
+		<table border="1" class="table">
 			<tr>
 				<th>景点ID</th>
 				<th>景点名称</th>

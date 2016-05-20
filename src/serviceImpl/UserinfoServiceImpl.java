@@ -25,12 +25,19 @@ public class UserinfoServiceImpl implements UserinfoService{
 
 	@Override
 	public int insert(Userinfo record) {
+		record.setStatus(1);
 		return userinfoDAO.insert(record);
 	}
 
 	@Override
 	public List<Userinfo> selectByExample(UserinfoExample example) {
 		return userinfoDAO.selectByExample(example);
+	}
+
+	@Override
+	public int changeUserinfo(Userinfo record, UserinfoExample example) {
+		// TODO Auto-generated method stub
+		return userinfoDAO.changeUserinfo(record, example);
 	}
 	
 }

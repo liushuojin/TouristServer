@@ -35,4 +35,11 @@ public class UserinfoDAOImpl implements UserinfoDAO {
 	public List<Userinfo> selectByExample(UserinfoExample example) {
 		return userinfoMapper.selectByExample(example);
 	}
+
+	@Override
+	public int changeUserinfo(Userinfo record, UserinfoExample example) {
+		return userinfoMapper.updateByExample(record, example);
+		
+	}
+
 }

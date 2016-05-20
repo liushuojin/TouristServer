@@ -3,13 +3,16 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import entity.Userinfo;
 import entity.UserinfoExample;
@@ -127,5 +130,18 @@ public class UserinfoController {
 		}
 		return null;
 	}
-
+	@RequestMapping("/chStatus")
+	@ResponseBody
+	public Map<String, Object> chStatus(HttpServletRequest request,
+			 Integer id,ModelMap modelMap){
+		UserinfoExample example = new UserinfoExample();
+		example.createCriteria().andIdEqualTo(id);
+		Userinfo userinfo = userinfoService.selectByExample(example).get(0);
+		if(userinfo != null){
+			userinfo.setStatus(userinfo.getStatus() == 1 ? 0 : 1);
+			userinfoService.changeUserinfo(userinfo, example);
+			modelMap.put("status", userinfo.getStatus());
+		}
+		return modelMap;
+	}
 }

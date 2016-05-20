@@ -9,4 +9,5 @@ public interface UserinfoService {
 	List<Userinfo> getUserinfos();
 	int insert(Userinfo record);
 	List<Userinfo> selectByExample(UserinfoExample example);
+	int changeUserinfo(Userinfo record, UserinfoExample example);
 }

@@ -10,4 +10,5 @@ public interface UserinfoDAO {
 	List<Userinfo> selectByExample();
 	int insert(Userinfo record);
 	List<Userinfo> selectByExample(UserinfoExample example);
+	int changeUserinfo(Userinfo record, UserinfoExample example);
 }
