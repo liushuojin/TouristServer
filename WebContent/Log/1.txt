@@ -1,0 +1,111 @@
+0    [localhost-startStop-1] INFO  org.apache.solr.servlet.SolrDispatchFilter  每 SolrDispatchFilter.init()
+31   [localhost-startStop-1] INFO  org.apache.solr.core.SolrResourceLoader  每 Using JNDI solr.home: E:/program files/apache-tomcat-7.0.52/solr
+31   [localhost-startStop-1] INFO  org.apache.solr.core.SolrResourceLoader  每 new SolrResourceLoader for directory: 'E:/program files/apache-tomcat-7.0.52/solr\'
+188  [localhost-startStop-1] INFO  org.apache.solr.core.ConfigSolr  每 Loading container configuration from E:\program files\apache-tomcat-7.0.52\solr\solr.xml
+344  [localhost-startStop-1] INFO  org.apache.solr.core.CoresLocator  每 Config-defined core root directory: E:\program files\apache-tomcat-7.0.52\solr
+360  [localhost-startStop-1] INFO  org.apache.solr.core.CoreContainer  每 New CoreContainer 139600164
+360  [localhost-startStop-1] INFO  org.apache.solr.core.CoreContainer  每 Loading cores into CoreContainer [instanceDir=E:/program files/apache-tomcat-7.0.52/solr\]
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting socketTimeout to: 0
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting urlScheme to: null
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting connTimeout to: 0
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting maxConnectionsPerHost to: 20
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting corePoolSize to: 0
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting maximumPoolSize to: 2147483647
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting maxThreadIdleTime to: 5
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting sizeOfQueue to: -1
+376  [localhost-startStop-1] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  每 Setting fairnessPolicy to: false
+578  [localhost-startStop-1] INFO  org.apache.solr.logging.LogWatcher  每 SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+578  [localhost-startStop-1] INFO  org.apache.solr.logging.LogWatcher  每 Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+578  [localhost-startStop-1] INFO  org.apache.solr.core.CoreContainer  每 Host Name: 
+625  [localhost-startStop-1] INFO  org.apache.solr.core.CoresLocator  每 Looking for core definitions underneath E:\program files\apache-tomcat-7.0.52\solr
+641  [localhost-startStop-1] INFO  org.apache.solr.core.CoresLocator  每 Found core collection1 in E:\program files\apache-tomcat-7.0.52\solr\collection1\
+703  [localhost-startStop-1] INFO  org.apache.solr.core.CoresLocator  每 Found 1 core definitions
+703  [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.CoreContainer  每 Creating SolrCore 'collection1' using instanceDir: E:\program files\apache-tomcat-7.0.52\solr\collection1
+703  [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  每 new SolrResourceLoader for directory: 'E:\program files\apache-tomcat-7.0.52\solr\collection1\'
+781  [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrConfig  每 Adding specified lib dirs to ClassLoader
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\contrib\extraction\lib).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\dist).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\contrib\clustering\lib).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\dist).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\contrib\langid\lib).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\dist).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\contrib\velocity\lib).
+781  [coreLoadExecutor-4-thread-1] WARN  org.apache.solr.core.SolrResourceLoader  每 Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: E:\program files\apache-tomcat-7.0.52\solr\collection1\..\..\..\dist).
+906  [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.update.SolrIndexConfig  每 IndexWriter infoStream solr logging is enabled
+922  [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrConfig  每 Using Lucene MatchVersion: LUCENE_47
+1078 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.Config  每 Loaded SolrConfig: solrconfig.xml
+1093 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.schema.IndexSchema  每 Reading Solr Schema from schema.xml
+1141 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.schema.IndexSchema  每 [collection1] Schema name=example
+1671 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.schema.IndexSchema  每 unique key field: id
+1781 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.schema.FileExchangeRateProvider  每 Reloading exchange rates from file currency.xml
+1796 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.schema.FileExchangeRateProvider  每 Reloading exchange rates from file currency.xml
+2139 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 solr.NRTCachingDirectoryFactory
+2155 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 [collection1] Opening new SolrCore at E:\program files\apache-tomcat-7.0.52\solr\collection1\, dataDir=E:\program files\apache-tomcat-7.0.52\solr\data\
+2155 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.JmxMonitoredMap  每 JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@176f3f86
+2187 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+2187 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+2203 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.CachingDirectoryFactory  每 return new directory for E:\program files\apache-tomcat-7.0.52\solr\data
+2203 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 New index directory detected: old=null new=E:\program files\apache-tomcat-7.0.52\solr\data\index/
+2203 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.CachingDirectoryFactory  每 return new directory for E:\program files\apache-tomcat-7.0.52\solr\data\index
+2234 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 created json: solr.JSONResponseWriter
+2234 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 adding lazy queryResponseWriter: solr.VelocityResponseWriter
+2234 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 created velocity: solr.VelocityResponseWriter
+2234 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 created xslt: solr.XSLTResponseWriter
+2234 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.response.XSLTResponseWriter  每 xsltCacheLifetimeSeconds=5
+2343 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 no updateRequestProcessorChain defined as default, creating implicit default
+2359 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /select: solr.SearchHandler
+2359 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /query: solr.SearchHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /get: solr.RealTimeGetHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /browse: solr.SearchHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /update: solr.UpdateRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /update/json: solr.UpdateRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /update/csv: solr.UpdateRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /update/extract: solr.extraction.ExtractingRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /analysis/field: solr.FieldAnalysisRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /analysis/document: solr.DocumentAnalysisRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /admin/: solr.admin.AdminHandlers
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /admin/ping: solr.PingRequestHandler
+2374 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /debug/dump: solr.DumpRequestHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /replication: solr.ReplicationHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /spell: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /suggest: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /tvrh: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /terms: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 adding lazy requestHandler: solr.SearchHandler
+2390 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.RequestHandlers  每 created /elevate: solr.SearchHandler
+2421 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  每 xsltCacheLifetimeSeconds=60
+2421 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  每 xsltCacheLifetimeSeconds=60
+2421 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  每 xsltCacheLifetimeSeconds=60
+2452 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 Hard AutoCommit: if uncommited for 15000ms; 
+2452 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 Soft AutoCommit: disabled
+2530 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\program files\apache-tomcat-7.0.52\solr\data\index lockFactory=NativeFSLockFactory@E:\program files\apache-tomcat-7.0.52\solr\data\index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_5,generation=5}
+2530 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.SolrCore  每 newest commit generation = 5
+2562 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.search.SolrIndexSearcher  每 Opening Searcher@7c996ee8[collection1] main
+2562 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  每 Initializing spell checkers
+2577 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.spelling.DirectSolrSpellChecker  每 init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2577 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  每 No queryConverter defined, using default converter
+2577 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.component.SuggestComponent  每 Initializing SuggestComponent
+2577 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.spelling.suggest.SolrSuggester  每 init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2593 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.spelling.suggest.SolrSuggester  每 Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+2593 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.component.QueryElevationComponent  每 Loading QueryElevation from: E:\program files\apache-tomcat-7.0.52\solr\collection1\conf\elevate.xml
+2640 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.handler.ReplicationHandler  每 Commits will be reserved for  10000
+2640 [searcherExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  每 QuerySenderListener sending requests to Searcher@7c996ee8[collection1] main{StandardDirectoryReader(segments_5:11:nrt _3(4.7):C3)}
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  每 [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=62 
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  每 QuerySenderListener done.
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  每 Loading spell index for spellchecker: default
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  每 Loading spell index for spellchecker: wordbreak
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.handler.component.SuggestComponent  每 Loading suggester index for: mySuggester
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.spelling.suggest.SolrSuggester  每 reload()
+2702 [searcherExecutor-5-thread-1] INFO  org.apache.solr.spelling.suggest.SolrSuggester  每 build()
+2733 [searcherExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  每 [collection1] Registered new searcher Searcher@7c996ee8[collection1] main{StandardDirectoryReader(segments_5:11:nrt _3(4.7):C3)}
+2733 [coreLoadExecutor-4-thread-1] INFO  org.apache.solr.core.CoreContainer  每 registering core: collection1
+2733 [localhost-startStop-1] INFO  org.apache.solr.servlet.SolrDispatchFilter  每 user.dir=E:\program files\eclipse
+2733 [localhost-startStop-1] INFO  org.apache.solr.servlet.SolrDispatchFilter  每 SolrDispatchFilter.init() done
